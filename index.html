@@ -54,7 +54,6 @@
       <div style="border-radius: 8px; box-shadow: var(--shadow)">
         <img
           src="/images/header-800px-200px.jpg"
-          data-testid="/images/header-800px-200px.jpg"
           width="auto"
           height="auto"
           alt="Header"
@@ -83,7 +82,7 @@
               src="/images/silver-200px.jpg"
               width="auto"
               height="auto"
-              data-testid="/images/silver-200px.jpg"
+              data-testid="slackProfilePicture"
               alt="Silver Idahosa"
               style="max-width: 100%; margin: auto; border-radius: 50%"
             />
@@ -100,14 +99,14 @@
              
             >
               <span><i class="fa-brands fa-slack"></i></span>
-              <p  data-testid="Silver">Silver</p>
+              <p  data-testid="slackDisplayName">Silver</p>
             </div>
             <div
               style="display: flex; align-items: center; gap: 0.5rem"
               
             >
               <span><i class="fa-solid fa-envelope"></i></span>
-              <p data-testid="eseosaidahosa1@gmail.com">eseosaidahosa1@gmail.com</p>
+              <p data-testid="slackEmail">eseosaidahosa1@gmail.com</p>
             </div>
             <div
               style="
@@ -118,11 +117,11 @@
               "
             >
               <span><i class="fa-solid fa-calendar"></i></span>
-              <p id="currentDay"></p>
+              <p id="currentDay" data-testid="currentDay"></p>
             </div>
             <div style="display: flex; align-items: center; gap: 0.5rem">
               <span><i class="fa-solid fa-clock"></i></span>
-              <p id="currentTimeUTC"></p>
+              <p id="currentTimeUTC" data-testid="currentTimeUTC"></p>
             </div>
 
             <p style="margin-top: 1rem">
@@ -151,19 +150,19 @@
                 "
               >
                 <a
-                  data-testid="http://keyword.dog/"
+                  data-testid="keywordLink"
                   target="_blank"
                   href="http://keyword.dog/"
                   >Keywords</a
                 >
                 <a
                   target="_blank"
-                  data-testid="http://scrapeanyweb.site/"
+                  data-testid="scrapeanywebLink"
                   href="http://scrapeanyweb.site/"
                   >Website scraping</a
                 >
                 <a
-                  data-testid="http://hng.tech/learn/"
+                  data-testid="hngLink"
                   href="http://hng.tech/learn/"
                   target="_blank"
                   >HNG</a
@@ -283,10 +282,8 @@
         );
 
         currentTimeUTCElement.textContent = `${utcTime}`;
-        currentTimeUTCElement.setAttribute("data-testid", utcTime);
-
         currentDayElement.textContent = `${currentDay}`;
-        currentDayElement.setAttribute("data-testid", currentDay);
+   
       }
 
       displayCurrentTimeUTCAndDay();
